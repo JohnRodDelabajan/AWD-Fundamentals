@@ -1,22 +1,27 @@
-* {
+body {
+    font-family: "Roboto Slab", serif ;
+    background-color: #000000;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    font-family: "Roboto Slab", serif; 
-    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #000;
+    background: #0a036b;
     padding: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 1000;
+    height: 80px;
 }
 
 .header .logo {
@@ -30,82 +35,48 @@ html, body {
     color: #00aaff;
 }
 
-.fundamentals {
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    max-width: 700px;
+    background: white;
+    padding-left: 40px;
+    padding-right: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+h1 {
     text-align: center;
-    padding: 50px 20px;
-    background-color: rgb(10, 3, 107);
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.fundamentals:hover {
-    background-color: rgb(20, 15, 127);
-    color: #ffe400;
-}
-
-.feature-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.feature {
-    width: 80%;
-    margin: 20px 0;
-    padding: 20px;
-    background: rgb(10, 3, 107);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: rgb(20, 10, 140);
-}
-
-.feature h1 {
-    font-size: 28px;
+label {
+    display: block;
     margin-bottom: 10px;
-    color: #fff;
-    transition: color 0.3s ease;
 }
 
-.feature h1:hover {
-    color: #ffe400;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.feature p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #fff;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
 }
 
-.footer {
-    background: #f4f4f4;
-    padding: 10px 20px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+button:hover {
+    background-color: #218838;
 }
 
-.footer:hover {
-    background-color: #e0e0e0;
-}
-
-.copyright {
-    font-size: 0.8em;
-    color: #888;
-    transition: color 0.3s ease;
-}
-
-.copyright:hover {
-    color: #333;
+#output {
+    margin-top: 20px;
+    font-size: 1.2em;
+    white-space: pre-wrap; /* Allows for better text wrapping */
 }
